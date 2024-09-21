@@ -1,0 +1,907 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>CompSci EduLinks</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7fc;
+    color: #333;
+  }
+
+  h2 {
+    color: #1a73e8;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  ul, #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .categories {
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .caret {
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+    color: #1a73e8;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .caret:hover {
+    background-color: #e8f0fe;
+  }
+
+  .caret::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .caret-down::before {
+    transform: rotate(90deg);
+  }
+
+  .nested {
+    display: none;
+    padding-left: 20px;
+    margin: 5px 0;
+  }
+
+  .nested li {
+    padding: 8px 16px;
+    border-left: 2px solid #dfe1e5;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+
+  .nested li:hover {
+    background-color: #f1f3f4;
+  }
+
+  .nested a {
+    text-decoration: none;
+    color: #202124;
+    display: block;
+  }
+
+  .nested p {
+    margin: 5px 0 10px 0;
+    font-size: 0.9em;
+    color: #555;
+  }
+
+  .highlight {
+    font-size: 1.2em;
+    color: #202124;
+  }
+
+  .highlight-pricing {
+    color: #00aaff;
+    font-weight: bold;
+  }
+
+  .highlight-title {
+    font-weight: bold;
+  }
+
+  .highlight-completion {
+    color: #00aa00;
+    font-weight: bold;
+  }
+
+  .active {
+    display: block;
+  }
+
+
+  .flex-container {
+    display: flex;
+    gap: 20px; /* Space between the two divs */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+
+  .info-box {
+    background-color: #e8f0fe;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Allows the divs to take equal space */
+    min-width: 250px; /* Minimum width to prevent overlap */
+  }
+
+  .info-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .info-list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+</style>
+</head>
+<body>
+
+<h2>💻🌐🎓 CompSci EduLinks 📚🔗✨</h2>
+<p>Explore a curated selection of resources discovered throughout my educational journey across various fields of <strong>Computer Science</strong>. Click on the arrows to dive deeper into each section.</p>
+
+<!-- Parent container to hold the two div sections side by side -->
+<div class="flex-container">
+  <div class="info-box">
+    <h3>Each item includes:</h3>
+    <ul>
+        <li>
+            <strong class="highlight-title">Category:</strong>
+            <span>The field or topic of the resource.</span>
+        </li>
+        <li>
+            <strong class="highlight-title">Title:</strong>
+            <span>A direct link to the resource.</span>
+        </li>
+        <li>
+            <strong class="highlight-title">Free/Paid Tag:</strong>
+            <span>Indicates whether the resource is free or paid.</span>
+        </li>
+        <li>
+            <strong class="highlight-title">Completion Percentage:</strong>
+            <span>Track progress and mark resources as complete.</span>
+        </li>
+    </ul>
+  </div>
+
+  <!-- Instructions Section -->
+  <div class="info-box">
+    <h3>Instructions for Using Emoticons</h3>
+    <p>To include an emoticon before each item to define its type (e.g., video, course, web, book, section), add the appropriate emoticons directly in the HTML code. Here's an example with some common types and their associated emoticons:</p>
+      <p class="info-list">
+    📂 <strong>Section</strong>, 📝 <strong>Course</strong>, 📹 <strong>Video</strong>, 📚 <strong>Book</strong>, 🌐 <strong>Web</strong>
+  </p>
+
+  </div>
+</div>
+
+<h3 class="categories">Categories</h3>
+
+<ul id="myUL">
+  <!-- Root -->
+  <li><span class="caret highlight">Computer Science</span>
+    <ul class="nested active">
+
+      <!-- Category -->
+      <li><span class="caret">.NET</span>
+        <ul class="nested">
+          <li>
+            <a href="https://m.youtube.com/watch?v=CqCDOosvZIk" target="_blank"><span class="highlight-title">📝 .NET Microservices – Full Course for Beginners - YouTube</span><span class="highlight-pricing"> [Free] </span><span class="highlight-completion">[100% Completed]</a></span>
+            <p>Learn the foundational elements of a microservices architecture with .NET in this beginner level course. You will incrementally building a real microservices-based application with the .NET platform and C#.</p>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?app=desktop&v=HFWQdGn5DaU" target="_blank"><span class="highlight-title">📝 Visual Basic (VB.NET) – Full Course for Beginners - YouTube</span><span class="highlight-pricing"> [Free] </span><span class="highlight-completion">[100% Completed]</span></a>
+            <p>Lean the fundamentals of programming with Visual Basic (sometimes called Visual Basic .NET or VB.NET). In this tutorial, you will learn about the basic constructs of high level programming languages, including sequence, selection and iteration. You will learn how to build an event-driven, form-based, user interface to capture input, and you will learn how to write code to validate and process the data collected.</p>
+          </li>
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">AI (ML/DS)</span>
+        <ul class="nested">
+          <!-- Subcategory-->
+          <li><span class="caret">Subcategory</span>
+            <ul class="nested active">
+              <li>
+                <a href="https://example.com" target="_blank">Title</a>
+                <p>Description.</p>
+              </li>
+              <li>
+                <a href="https://www.example.com" target="_blank"><span class="highlight-title">📝 Title</span><span class="highlight-pricing"> [Free] </span><span class="highlight-completion">[100% Completed]</span></a>
+                <p>Description.</p>
+              </li>
+              <li>
+                <a href="https://www.example.com" target="_blank"><span class="highlight-title">📝 Title</span><span class="highlight-pricing"> [Free] </span><span class="highlight-completion">[100% Completed]</span></a>
+                <p>Description.</p>
+              </li>
+            </ul>
+          </li>
+          <!-- End of Subcategory-->
+          <!-- Subcategory-->
+          <li><span class="caret">Subcategory</span>
+            <ul class="nested active">
+              <li>
+                <a href="https://www.example.com" target="_blank"><span class="highlight-title">📝 Title</span><span class="highlight-pricing"> [Paid] </span><span class="highlight-completion">[00% Completed]</span></a>
+                <p>Description.</p>
+              </li>
+              <li>
+                <a href="https://www.example.com" target="_blank"><span class="highlight-title">📝 Title</span><span class="highlight-pricing"> [Paid] </span><span class="highlight-completion">[00% Completed]</span></a>
+                <p>Description.</p>
+              </li>
+            </ul>
+          </li>
+          <!-- End of Subcategory-->
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+    <!-- Category -->
+      <li><span class="caret">Academic Courses</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Algorithms, Data structures, Big O, Math</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Android</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+    <!-- Category -->
+      <li><span class="caret">Angular</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">API</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Arduino</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">ASP.NET</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Assembly</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Astro</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Bash / Shell Scripting</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Blitz.js</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Business Options, Founding, Startups</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">C++ C#</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">COBOL</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Companies Hiring Now</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Computer Networking</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Computer Science</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Databases SQL</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Developer Roadmaps</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">DevLife</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">DevOps</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Flutter</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Freelancing</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Front End, UI/UX</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Full Stack Web Development, Software Engineering</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Go</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Google Cloud</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Google Colab</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Google Developers</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">GPU</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Hackatons</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">HashiCorp Terraform</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Java</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Kotlin</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Kubernetes / Docker / Podman</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Linux</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Low Code</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Marketing</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Metaverse AR / VR</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">MVC</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">NestJS</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Next JS</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">No-code</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Node JS / Bun / Deno and Express</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">OO Programming (paradigm) and UML Diagrams</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">OpenStack</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Oracle Cloud</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">PHP</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Portfolios</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Programming / Software Engineering Books</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Python Django Flask</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">React</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">React Native</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Reactive Programming (paradigm)</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Ruby</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Ruby on Rails</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Rust</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Security VS Hacking</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Software Design and Architecture, Best practices</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Software Development Methodologies</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">SolidJS</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Statistics</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Svelte</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">T3 from Vercel</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Technical Support</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Testing</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Third Party Services</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">TypeScript</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Unity</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Unstoppable Domains</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Vue</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Web Design</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Web3, Blockchain and Trading</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Webpack</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">Windows 11</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+      <!-- Category -->
+      <li><span class="caret">New</span>
+        <ul class="nested">
+
+        </ul>
+      </li>
+      <!-- End of Category-->
+
+
+    </ul>
+  </li>
+</ul>
+<!-- End of Root -->
+
+<div class="info-box">
+  <h3>Key fields in Computer Science</h3>
+  <p style="text-align: left; margin: 10px 0;">Discover the diverse fields that make up the world of Computer Science:</p>
+  <ul>
+    <li>Artificial Intelligence (AI)</li>
+    <li>Machine Learning (ML)</li>
+    <li>Data Science</li>
+    <li>Cybersecurity</li>
+    <li>Software Development</li>
+    <li>Web Development</li>
+    <li>Mobile App Development</li>
+    <li>Database Management</li>
+    <li>Human-Computer Interaction (HCI)</li>
+    <li>Networking</li>
+    <li>Computer Graphics</li>
+    <li>Operating Systems</li>
+    <li>Theory of Computation</li>
+    <li>Distributed Systems</li>
+    <li>Embedded Systems</li>
+  </ul>
+  <p class="info-list">
+    Copyright © 2024 - Present Esteban Herrera. All rights are reserved.
+  </p>
+</div>
+
+<script>
+  var toggler = document.getElementsByClassName("caret");
+  for (var i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+</script>
+
+</body>
+</html>
