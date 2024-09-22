@@ -28,7 +28,7 @@
   }
 
   p {
-    text-align: center;
+    text-align: left;
     color: #555;
     margin-bottom: 20px;
   }
@@ -142,7 +142,7 @@
     min-width: 250px; /* Minimum width to prevent overlap */
   }
 
-  .info-list {
+  .info-list .footer {
     list-style-type: none;
     padding-left: 0;
   }
@@ -162,7 +162,7 @@
 <body>
 
 <h2>💻🌐🎓 CompSci EduLinks 📚🔗✨</h2>
-<p>Explore a selection of resources discovered throughout my educational journey across various fields of <strong>Computer Science</strong>. Click on the arrows to dive deeper into each section.</p>
+<p style="text-align: center; margin: 10px 0;">Explore a selection of resources discovered throughout my educational journey across various fields of <strong>Computer Science</strong>. Click on the arrows to dive deeper into each section.</p>
 
 <!-- Parent container to hold the two div sections side by side -->
 <div class="flex-container">
@@ -209,11 +209,11 @@
         <ul class="nested">
           <li>
             <a href="https://m.youtube.com/watch?v=CqCDOosvZIk" target="_blank"><span class="highlight-title">📝 .NET Microservices – Full Course for Beginners - YouTube</span><span class="highlight-pricing"> [Free] </span><span class="highlight-completion">[100% Completed]</span></a>
-            <p style="text-align: left; margin: 10px 0;">Learn the foundational elements of a microservices architecture with .NET in this beginner level course. You will incrementally building a real microservices-based application with the .NET platform and C#.</p>
+            <p>Learn the foundational elements of a microservices architecture with .NET in this beginner level course. You will incrementally building a real microservices-based application with the .NET platform and C#.</p>
           </li>
           <li>
             <a href="https://www.youtube.com/watch?app=desktop&v=HFWQdGn5DaU" target="_blank"><span class="highlight-title">📝 Visual Basic (VB.NET) – Full Course for Beginners - YouTube</span><span class="highlight-pricing"> [Free] </span><span class="highlight-completion">[100% Completed]</span></a>
-            <p style="text-align: left; margin: 10px 0;">Learn the fundamentals of programming with Visual Basic (sometimes called Visual Basic .NET or VB.NET). In this tutorial, you will learn about the basic constructs of high level programming languages, including sequence, selection and iteration. You will learn how to build an event-driven, form-based, user interface to capture input, and you will learn how to write code to validate and process the data collected.</p>
+            <p>Learn the fundamentals of programming with Visual Basic (sometimes called Visual Basic .NET or VB.NET). In this tutorial, you will learn about the basic constructs of high level programming languages, including sequence, selection and iteration. You will learn how to build an event-driven, form-based, user interface to capture input, and you will learn how to write code to validate and process the data collected.</p>
           </li>
         </ul>
       </li>
@@ -239,7 +239,7 @@
                   <span class="highlight-pricing"> [Free] </span>
                   <span class="highlight-completion">[100% Completed]</span>
                 </a>
-                <p style="text-align: left; margin: 10px 0;">Description.</p>
+                <p>Description.</p>
                 <div class="rating">
                   <span class="star">★</span>
                   <span class="star">★</span>
@@ -254,7 +254,7 @@
                   <span class="highlight-pricing"> [Free] </span>
                   <span class="highlight-completion">[100% Completed]</span>
                 </a>
-                <p style="text-align: left; margin: 10px 0;">Description.</p>
+                <p>Description.</p>
                 <div class="rating">
                   <span class="star">★</span>
                   <span class="star">★</span>
@@ -275,7 +275,7 @@
                   <span class="highlight-pricing"> [Free] </span>
                   <span class="highlight-completion">[100% Completed]</span>
                 </a>
-                <p style="text-align: left; margin: 10px 0;">Description.</p>
+                <p>Description.</p>
                 <div class="rating">
                   <span class="star">★</span>
                   <span class="star">★</span>
@@ -290,7 +290,7 @@
                   <span class="highlight-pricing"> [Free] </span>
                   <span class="highlight-completion">[100% Completed]</span>
                 </a>
-                <p style="text-align: left; margin: 10px 0;">Description.</p>
+                <p>Description.</p>
                 <div class="rating">
                   <span class="star">★</span>
                   <span class="star">★</span>
@@ -914,7 +914,7 @@
 
 <div class="info-box">
   <h3>Key fields in Computer Science</h3>
-  <p style="text-align: left; margin: 10px 0;">Discover the diverse fields that make up the world of Computer Science:</p>
+  <p>Discover the diverse fields that make up the world of Computer Science:</p>
   <ul>
     <li>Artificial Intelligence (AI)</li>
     <li>Machine Learning (ML)</li>
@@ -932,10 +932,11 @@
     <li>Distributed Systems</li>
     <li>Embedded Systems</li>
   </ul>
-  <p class="info-list">
-    Copyright © 2024 - Present Esteban Herrera. All rights are reserved.
-  </p>
 </div>
+
+<p class="footer" style="text-align: center; margin: 10px 0;">
+  Copyright © 2024 - Present Esteban Herrera. All rights are reserved.
+</p>
 
 <script>
   var toggler = document.getElementsByClassName("caret");
