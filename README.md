@@ -1,2 +1,2 @@
-# CompSci-EduLinks
-Computer Science educational links organized similarly to web browser bookmarks
+# EduLinks
+Selected educational links organized like web browser bookmarks—supercharged with extra features.
